@@ -1,0 +1,50 @@
+{
+  "entities": {
+    "Appointment": {
+      "title": "Appointment",
+      "description": "Bản ghi lịch hẹn khám nha khoa",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "endTime": { "type": "string" },
+        "duration": { "type": "number" },
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "groupCode": { "type": "string" },
+        "serviceCode": { "type": "string" },
+        "optionId": { "type": "string" },
+        "tooth": { "type": "string" },
+        "visitNumber": { "type": "number" },
+        "doctor": { "type": "string" },
+        "status": { "type": "string" },
+        "chair": { "type": "string" },
+        "note": { "type": "string" },
+        "payments": { "type": "array" }
+      },
+      "required": ["id", "date", "time", "name"]
+    },
+    "ScheduleDay": {
+      "title": "ScheduleDay",
+      "description": "Lịch hẹn tổng hợp theo ngày của phòng khám",
+      "type": "object",
+      "properties": {
+        "dateKey": { "type": "string" },
+        "appointments": { "type": "array" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["dateKey"]
+    }
+  },
+  "firestore": {
+    "/schedules/{dateKey}": {
+      "schema": { "$ref": "ScheduleDay" },
+      "description": "Lưu trữ danh sách lịch hẹn theo từng ngày"
+    },
+    "/appointments/{appointmentId}": {
+      "schema": { "$ref": "Appointment" },
+      "description": "Lưu trữ từng lịch hẹn độc lập"
+    }
+  }
+}

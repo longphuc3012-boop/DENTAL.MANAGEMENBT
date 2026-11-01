@@ -1,0 +1,6 @@
+{
+  "summary":  "Kế hoạch triển khai nâng cấp hệ thống Nha Khoa SmileCare: kết nối backend Firebase Firestore & Auth, cột thanh toán chi tiết từng đợt, tính năng tự động sao lưu bảng tính Excel đa trang mỗi 10 phút, và nâng cấp toàn diện giao diện tông màu Xanh ngọc y tế kết hợp Xanh cobalt đậm nổi bật.",
+  "updatedAt":  "2026-10-30T16:19:14.855331295Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}

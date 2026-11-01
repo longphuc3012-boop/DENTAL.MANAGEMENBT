@@ -1,0 +1,7 @@
+{
+  "name": "Nha Khoa Dental Scheduler - Soạn Lịch Nha Khoa",
+  "description": "Hệ thống quản lý và soạn lịch hẹn thông minh cho phòng khám nha khoa với sơ đồ răng tương tác FDI, phân ca bác sĩ, tự động tính thời gian và quản lý thanh toán.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

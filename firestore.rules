@@ -1,0 +1,28 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // Schedule collection for daily appointment arrays
+    match /schedules/{dateKey} {
+      allow read, write: if isValidId(dateKey);
+    }
+
+    // Appointments collection for individual records
+    match /appointments/{appointmentId} {
+      allow read, write: if isValidId(appointmentId);
+    }
+  }
+}

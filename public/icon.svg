@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="60%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="toothGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e0f2fe" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Subtle Inner Ring Accent -->
+  <rect x="16" y="16" width="480" height="480" rx="96" fill="none" stroke="#60a5fa" stroke-width="4" stroke-opacity="0.3" />
+
+  <!-- Tooth Graphic with Shadow -->
+  <g filter="url(#shadow)">
+    <!-- Stylized Modern Molar Tooth -->
+    <path d="M 256 100 
+             C 325 100 375 130 380 195 
+             C 385 245 365 295 348 355 
+             C 336 395 312 425 285 415 
+             C 265 407 260 355 256 335 
+             C 252 355 247 407 227 415 
+             C 200 425 176 395 164 355 
+             C 147 295 127 245 132 195 
+             C 137 130 187 100 256 100 Z" 
+          fill="url(#toothGrad)" />
+          
+    <!-- Medical Cross / Plus Badge in Center -->
+    <g transform="translate(256, 215)">
+      <circle r="44" fill="#0284c7" />
+      <path d="M -8 -24 H 8 V -8 H 24 V 8 H 8 V 24 H -8 V 8 H -24 V -8 H -8 Z" fill="#ffffff" />
+    </g>
+
+    <!-- Sparkle / Shine Star in Upper Right -->
+    <path d="M 370 125 Q 370 145 390 145 Q 370 145 370 165 Q 370 145 350 145 Q 370 145 370 125 Z" fill="#38bdf8" />
+    <circle cx="395" cy="115" r="4" fill="#ffffff" />
+  </g>
+</svg>
